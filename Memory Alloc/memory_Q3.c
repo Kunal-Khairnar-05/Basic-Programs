@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int*a;
+    a = (int*) calloc(6,sizeof(int));
+    for (int i = 0; i < 5; i++)
+    {
+        printf("\n Enter the value of element %d = ",i+1 );
+        scanf("%d",&a[i]);
+    }
+
+    for (int i = 0; i < 5; i++)
+    {
+        printf("\n The value of element %d is %d \n",i+1,a[i]);
+    }
+
+    a= realloc(a,10*sizeof(int));
+
+    for (int i = 0; i < 10; i++)
+    {
+        printf("\n Enter the value of element %d = ",i+1 );
+        scanf("%d",&a[i]);
+    }
+
+    for (int i = 0; i < 10; i++)
+    {
+        printf("\n The value of element %d is %d",i+1,a[i]);
+    }
+    
+return 0;
+}
